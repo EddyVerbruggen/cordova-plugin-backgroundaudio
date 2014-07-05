@@ -45,7 +45,7 @@ $ cordova prepare
 
 iOS: Copy the `.h` and `.m` files to `platforms/ios/<ProjectName>/Plugins`
 
-3\. Open your <ProjectName>-Info.plist and add a key `UIBackgroundModes` with an array value `audio`.
+3\. Open your `<ProjectName>-Info.plist` and add a key `UIBackgroundModes` with an array value `audio`.
 
 ## 3. Usage
 Nothing to do here as the plugin will call the required native code on load automatically :)
