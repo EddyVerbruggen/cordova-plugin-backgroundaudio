@@ -5,30 +5,16 @@
 
 NSString* theCallbackId;
 
+// this method is executed when the app loads because of the onload param in plugin.xml
 - (void)pluginInitialize {
-  NSLog(@"---- init plugin start");
-
   AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-  BOOL ok;
   NSError *setCategoryError = nil;
-  ok = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+  BOOL ok = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
 
-  NSLog(@"---- init plugin done");
+  NSLog(@"BackgroundAudio plugin ok? %@", ok ? @"YES" : @"NO");
+  if (!ok) {
+    NSLog(@"BackgroundAudio plugin error: %@", setCategoryError.description);
+  }
 }
-
-/*
-- (void) enable:(CDVInvokedUrlCommand*)command {
-  // todo maybe just make this an onload plugin without a JS interface
-  theCallbackId = command.callbackId;
-
-  AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-  BOOL ok;
-  NSError *setCategoryError = nil;
-  ok = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
-
-	CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-  [self writeJavascript: [pluginResult toSuccessCallbackString:command.callbackId]];
-}
-*/
 
 @end
