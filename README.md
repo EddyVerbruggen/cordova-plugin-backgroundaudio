@@ -4,18 +4,18 @@ by [Eddy Verbruggen](http://twitter.com/eddyverbruggen)
 ## 0. Index
 
 1. [Description](#1-description)
-2. [Installation](#3-installation)
+2. [Installation](#2-installation)
 	2. [Automatically (CLI / Plugman)](#automatically-cli--plugman)
 	2. [Manually](#manually)
-3. [Usage](#4-usage)
-4. [License](#6-license)
+3. [Usage](#3-usage)
+4. [License](#4-license)
 
 ## 1. Description
 
-Allow your app to keep on playing audio when it's in the background.
+Allows your app to keep on playing audio when it's in the background.
 
 * Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
-* For iOS only, as others (at least Android) don't need a plugin for background audio (TODO explain).
+* For iOS only.
 
 ## 2. Installation
 
@@ -31,63 +31,24 @@ $ cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-background
 $ cordova prepare
 ```
 
-# TODO, below:
-
-
 ### Manually
 
 1\. Add the following xml to your `config.xml` in the root directory of your `www` folder:
 ```xml
-<feature name="ActionSheet">
-  <param name="ios-package" value="ActionSheet" />
+<feature name="BackgroundAudio">
+  <param name="ios-package" value="BackgroundAudio" />
+  <param name="onload" value="true" />
 </feature>
 ```
 
-2\. Grab a copy of ActionSheet.js, add it to your project and reference it in `index.html`:
-```html
-<script type="text/javascript" src="js/ActionSheet.js"></script>
-```
-
-3\. Download the source files and copy them to your project.
+2\. Download the source files and copy them to your project.
 
 iOS: Copy the `.h` and `.m` files to `platforms/ios/<ProjectName>/Plugins`
 
+3\. Open your <ProjectName>-Info.plist and add a key `UIBackgroundModes` with an array value `audio`.
+
 ## 3. Usage
-It's probably easiest to show how the ActionSheets of the screenshots above have been created.
-```js
-  var callback = function(buttonIndex) {
-    setTimeout(function() {
-      // like other Cordova plugins (prompt, confirm) the buttonIndex is 1-based (first button is index 1)
-      alert('button index clicked: ' + buttonIndex);
-    });
-  };
-
-  function testShareSheet() {
-    var options = {
-        'title': 'What do you want with this image?',
-        'buttonLabels': ['Share via Facebook', 'Share via Twitter'],
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete it'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testDeleteSheet() {
-    var options = {
-        'addCancelButtonWithLabel': 'Cancel',
-        'addDestructiveButtonWithLabel' : 'Delete note'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-
-  function testLogoutSheet() {
-    var options = {
-        'buttonLabels': ['Log out'],
-        'addCancelButtonWithLabel': 'Cancel'
-    };
-    window.plugins.actionsheet.show(options, callback);
-  };
-```
+Nothing to do here as the plugin will call the required native code on load automatically :)
 
 ## 4. License
 

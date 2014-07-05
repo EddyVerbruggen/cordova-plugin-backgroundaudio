@@ -6,7 +6,7 @@
   <name>BackgroundAudio</name>
 
   <description>
-    Allow your app to keep on playing audio when it's in the background.
+    Allows your app to keep on playing audio when it's in the background.
   </description>
 
   <license>MIT</license>
