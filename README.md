@@ -50,6 +50,11 @@ iOS: Copy the `.h` and `.m` files to `platforms/ios/<ProjectName>/Plugins`
 ## 3. Usage
 Nothing to do here as the plugin will call the required native code on load automatically :)
 
+### 3.1 Another Use-Case
+When developing a app with media in it, the volume of the ringtone defines the volume of the media. So when the ringtone is muted, the sound of the media is muted. With this plugin installed, the volume of the media in the app is defined by the media volume of the phone.
+
+Having only this Use-Case, your app may get rejected in the App Store, because you are not using the background feature. You have to remove the `audio` array in the `UIBackgroundModes` section manually in the `<ProjectName>-Info.plist` file
+
 ## 4. License
 
 [The MIT License (MIT)](http://www.opensource.org/licenses/mit-license.html)
