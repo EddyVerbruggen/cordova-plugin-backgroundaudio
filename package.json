@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "name": "nl.x-services.plugins.backgroundaudio",
+  "cordova_name": "BackgroundAudio",
+  "description": "Allows your app to keep on playing audio when it's in the background.",
+  "license": "MIT",
+  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)"
+}
