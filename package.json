@@ -4,5 +4,21 @@
   "cordova_name": "BackgroundAudio",
   "description": "Allows your app to keep on playing audio when it's in the background.",
   "license": "MIT",
-  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)"
+  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "cordova": {
+    "id": "nl.x-services.plugins.backgroundaudio",
+    "platfo rms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddyVerbruggen/cordova-plugin-backgroundaudio.git"
+  },
+  "keywords": [
+    "cordova",
+    "ios",
+    "background",
+    "audio"
+  ]
 }
