@@ -7,7 +7,7 @@
   "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
   "cordova": {
     "id": "nl.x-services.plugins.backgroundaudio",
-    "platfo rms": [
+    "platforms": [
       "ios"
     ]
   },
