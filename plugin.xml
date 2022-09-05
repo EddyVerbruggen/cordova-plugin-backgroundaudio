@@ -18,11 +18,11 @@
   <!-- ios -->
   <platform name="ios">
 
-    <config-file target="*-Info.plist" parent="UIBackgroundModes">
+    <!-- config-file target="*-Info.plist" parent="UIBackgroundModes">
       <array>
         <string>audio</string>
       </array>
-    </config-file>
+    </config-file -->
 
     <config-file target="config.xml" parent="/*">
       <feature name="BackgroundAudio">
