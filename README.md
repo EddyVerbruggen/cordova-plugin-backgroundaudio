@@ -1,3 +1,6 @@
+Attention - we just removed the modification of the info plist file to! - No other changes
+
+
 # BackgroundAudio - a Cordova plugin
 by [Eddy Verbruggen](http://twitter.com/eddyverbruggen)
 
